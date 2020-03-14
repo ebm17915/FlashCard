@@ -20,9 +20,9 @@ Guess the right answer of the flashcard! Tap to see the answer! Tap again to see
 - [ ] User can store multiple choice questions
 
 ## Lab 2
-Guess the right answer of the flashcard! Tap to see the answer! Tap again to see the question!
 
 ### App Description
+Guess the right answer of the flashcard! Tap to see the answer! Tap again to see the question!
 
 ### App Walk-though
 
