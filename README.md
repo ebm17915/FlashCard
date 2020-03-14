@@ -26,7 +26,7 @@ Guess the right answer of the flashcard! Tap to see the answer! Tap again to see
 
 ### App Walk-though
 
-<img src="https://recordit.co/pLOWRi1KTA" width=200><br>
+<img src="http://g.recordit.co/pLOWRi1KTA.gif" width=200><br>
 
 ## Required
 - [x] User can open the creation screen
