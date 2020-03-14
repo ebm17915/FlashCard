@@ -18,23 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1y-jf-8xh">
+                                <rect key="frame" x="192" y="777" width="30" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="7aS-DC-plr" kind="presentation" id="WkM-1J-vIU"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KNI-SB-T6o">
-                                <rect key="frame" x="26" y="276" width="362" height="302"/>
+                                <rect key="frame" x="76" y="134" width="263" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is AWS?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZU-ap-pCI">
-                                        <rect key="frame" x="0.0" y="52" width="362" height="199"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A cloud service provider." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ3-9v-p14">
+                                        <rect key="frame" x="-25" y="-18" width="313" height="315"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.109726079" green="1" blue="0.79031159770000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <gestureRecognizers/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A cloud service provider." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ3-9v-p14">
-                                        <rect key="frame" x="0.0" y="52" width="362" height="199"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is AWS?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZU-ap-pCI">
+                                        <rect key="frame" x="-25" y="-18" width="313" height="315"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.109726079" green="1" blue="0.79031159770000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -46,14 +55,20 @@
                                     <outletCollection property="gestureRecognizers" destination="cI1-jg-NXf" appends="YES" id="x5X-el-1Vz"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1y-jf-8xh">
-                                <rect key="frame" x="192" y="651" width="30" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe3-ff-D4r">
+                                <rect key="frame" x="66" y="549" width="283" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <segue destination="7aS-DC-plr" kind="presentation" id="WkM-1J-vIU"/>
-                                </connections>
+                                <state key="normal" title="A computer monitor"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7q-DT-iPM">
+                                <rect key="frame" x="66" y="600" width="283" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="A food brand"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZ7-qE-GrS">
+                                <rect key="frame" x="66" y="498" width="283" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="A cloud service provider"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,6 +78,10 @@
                     <connections>
                         <outlet property="Answer" destination="ZQ3-9v-p14" id="jwd-gJ-Nvf"/>
                         <outlet property="Question" destination="wZU-ap-pCI" id="sFm-cQ-Hts"/>
+                        <outlet property="btnOptionOne" destination="IZ7-qE-GrS" id="o48-z9-LMa"/>
+                        <outlet property="btnOptionThree" destination="A7q-DT-iPM" id="O7g-aW-BtJ"/>
+                        <outlet property="btnOptionTwo" destination="pe3-ff-D4r" id="wk5-ba-oNa"/>
+                        <outlet property="card" destination="KNI-SB-T6o" id="7J9-il-QAF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
