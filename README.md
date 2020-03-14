@@ -47,13 +47,11 @@
 ## Lab 1
 
 ### App Description
-`TODO://` Add app description
+Guess the right answer of the flashcard! Tap to see the answer! Tap again to see the question!
 
 ### App Walk-though
 
 <img src="http://g.recordit.co/sTbJbM9DKx.gif" width=200><br>
-
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
 ## Required
 - [x] Create New Project in Xcode
