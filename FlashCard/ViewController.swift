@@ -33,6 +33,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Read saved flashcards
+        readSavedFlashcards()
+        
+        // Adding initial flashcard if needed
+        if flashcards.count == 0 {
+        updateFlashcard(question: "What is AWS?", answer: "A cloud service provider")
+        } else {
+            updateLabels()
+            updateNextPrevButtons()
+        }
+        
         updateFlashcard(question: "What is AWS?", answer: "A cloud service provider")
     
         
@@ -145,7 +156,7 @@ class ViewController: UIViewController {
         }
     }
     func readSavedFlashcards() {
-        // Read dictionary array from disk (if any)
+        /// Read dictionary array from disk (if any)
         if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String:String]] {
             
             // In here we know for sure that we have a dictionary array
@@ -156,6 +167,19 @@ class ViewController: UIViewController {
             // Put all these cards in our flashcards array
             flashcards.append(contentsOf: savedCards)
         }
+    }
+    
+    func saveAllFlashcardsToDisk() {
+        // From flashcard array to dictionary array
+        let dictionaryArray = flashcards.map { (card) -> [String:String] in
+            return ["question": card.question, "answer": card.answer]
+        }
+        
+        // Save array on disk using UserDefaults
+        UserDefaults.standard.set(dictionaryArray, forKey: "flashcards")
+        
+        print("Flashcards saved to UserDefaults!")
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
