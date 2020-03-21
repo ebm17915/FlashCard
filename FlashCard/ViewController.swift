@@ -8,12 +8,23 @@
 
 import UIKit
 
+struct Flashcard {
+    var question: String
+    var answer: String
+}
+    // Array to hold our flashcards
+    var flashcards = [Flashcard]()
+
+    // Current flashcards index
+    var currentIndex = 0
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var Answer: UILabel!
     @IBOutlet weak var Question: UILabel!
     @IBOutlet weak var card: UIView!
-    
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var btnOptionOne: UIButton!
     @IBOutlet weak var btnOptionTwo: UIButton!
     @IBOutlet weak var btnOptionThree: UIButton!
@@ -21,6 +32,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateFlashcard(question: "What is AWS?", answer: "A cloud service provider")
+    
         
         //Cards
         card.layer.cornerRadius = 20.0
@@ -73,16 +87,82 @@ class ViewController: UIViewController {
             Answer.isHidden = false;
         }
     }
+    @IBAction func didTapOnNext(_ sender: Any) {
+        // Increase current index
+        currentIndex = currentIndex + 1
+        
+        // Update labels
+        updateLabels()
+        
+        // Update buttons
+        updateNextPrevButtons()
+    }
     
-    func updateFlashcard(question: String, answer: String){
-    Question.text = question
-    Answer.text = answer
+    @IBAction func didTapOnPrev(_ sender: Any) {
+        // Increase current index
+        currentIndex = currentIndex - 1
+        
+        // Update labels
+        updateLabels()
+        
+        // Update buttons
+        updateNextPrevButtons()
+    }
+    
+    func updateLabels() {
+    let currentFlashcard = flashcards[currentIndex]
+        Question.text = currentFlashcard.question
+        Answer.text = currentFlashcard.answer
+    }
+    
+    func updateFlashcard(question: String, answer: String) {
+    let flashcard = Flashcard(question: question, answer: answer)
+    Question.text = flashcard.question
+    Answer.text = flashcard.answer
+        
+        flashcards.append(flashcard)
+        // Console logs
+        print("Added new flashcard")
+        print("We now have \(flashcards.count) flashcards")
+        
+        // Update current index
+        currentIndex = flashcards.count - 1
+        print("Our current index is \(currentIndex)")
+        
+        // Update buttons
+        updateNextPrevButtons()
+        
+        // Update labels
+        updateLabels()
+    }
+    
+    func updateNextPrevButtons() {
+        // Disable nextButton if at the end
+        if currentIndex == flashcards.count - 1 {
+            nextButton.isEnabled = false
+        } else {
+            nextButton.isEnabled = true
+        }
+    }
+    func readSavedFlashcards() {
+        // Read dictionary array from disk (if any)
+        if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String:String]] {
+            
+            // In here we know for sure that we have a dictionary array
+            let savedCards = dictionaryArray.map {  dictionary -> Flashcard in
+                return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!)
+            }
+            
+            // Put all these cards in our flashcards array
+            flashcards.append(contentsOf: savedCards)
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let navigationController =  segue.destination as! UINavigationController
         let creationController = navigationController.topViewController as! CreationViewController
         creationController.flashcardsController = self
-    }
+  }
 }
+
 
