@@ -8,11 +8,11 @@ Guess the right answer of the flashcard! Tap to see the answer! Tap again to see
 
 ### App Walk-though
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="http://g.recordit.co/vEtuemF25n.gif" width=200><br>
 
 ## Required
 - [x] User can browse through multiple flashcards
-- [ ] User can re-open the app and see previously created flashcards
+- [x] User can re-open the app and see previously created flashcards
 - [x] Push code to GitHub
 ## Optional
 - [ ] User can delete a flashcard
