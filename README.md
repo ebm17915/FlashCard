@@ -1,6 +1,26 @@
 ## FLASHCARD
 
 📝 `NOTE:` Paste the README templates for each subsequent lab here at the top, (i.e. lab 2, 3, 4). This will show a history of your development process including which users stories you completed and how your app looked and functioned at each step.
+
+## Lab 4
+
+### App Description
+Guess the right answer of the flashcard! Tap to see the answer! Tap again to see the question!
+
+### App Walk-though
+
+## Required
+- [x] User should see the app icon 
+- [x] User should see a splash screen
+- [x] User should see an flip animation when revealing the answer
+- [x] User should see a slide animation when going to the next flashcard
+- [x] User should see a slide animation when going to the previous flashcard
+- [x] Push code to GitHub
+## Optional
+- [ ] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
+- [ ] User should see all views properly layout when using the app on a phone of different sizes
+- [ ] Correct answer in multiple choice should be random
+
 ## Lab 3
 
 ### App Description
@@ -8,11 +28,11 @@ Guess the right answer of the flashcard! Tap to see the answer! Tap again to see
 
 ### App Walk-though
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="http://g.recordit.co/vEtuemF25n.gif" width=200><br>
 
 ## Required
 - [x] User can browse through multiple flashcards
-- [ ] User can re-open the app and see previously created flashcards
+- [x] User can re-open the app and see previously created flashcards
 - [x] Push code to GitHub
 ## Optional
 - [ ] User can delete a flashcard
@@ -31,7 +51,7 @@ Guess the right answer of the flashcard! Tap to see the answer! Tap again to see
 ## Required
 - [x] User can open the creation screen
 - [x] User can cancel out of the creation screen
-- [ ] User can enter a new question and answer in the creation screen to then show it on the flashcard
+- [x] User can enter a new question and answer in the creation screen to then show it on the flashcard
 - [x] Push code to GitHub
 ## Optional
 - [ ] User gets an error if they try to create a new flashcard with no question or answer
