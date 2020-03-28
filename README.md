@@ -8,6 +8,7 @@
 Guess the right answer of the flashcard! Tap to see the answer! Tap again to see the question!
 
 ### App Walk-though
+<img src="http://g.recordit.co/k2a8S5CIdl.gif" width=200><br>
 
 ## Required
 - [x] User should see the app icon 
